@@ -1,1 +1,17 @@
-#css
+.titulo{
+	background-color: silver;
+}
+
+.fondo{
+	background-color: pink;
+	height: 100vh;
+}
+
+.lista{
+	background-color: white;
+}
+
+.ingresa{
+	background-color: white;
+	border:solid silver thin;
+}
