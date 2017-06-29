@@ -8,32 +8,27 @@ $(document).ready( function (){
     		alert("ingresa una tarea");
 			}*/
 
-		    var parrafo= $("<p class='listado'></p>");
-        	var caja= $("<input type='checkbox' id=''/>");
-        	var etiqueta= $("<label for=''></label>");
+		    var parrafo= $("<li class='listado'></li>");
+        	var caja= $("<input type='checkbox'/>");
+        	var etiqueta= $("<label></label>");
         	var boton= $("<button>Remove</button>");
 
         //condicion que agrega elementos a la lista presionando enter
     	if(e.which == 13) {
         event.preventDefault();
 
-        	$("#tareas").prepend(parrafo);
-        	$(parrafo).prepend(caja,etiqueta,boton);
+        	$("#tareas ul").prepend(parrafo);
+        	$(parrafo).prepend(caja,boton);
         	$(etiqueta).text(tarea);
+            $(caja).wrap(etiqueta);
 
     	}
 
-
-    	var pos = $(".listado").index();
-  			
-  		$(caja).attr( "id", "test-"+pos);
-        $(etiqueta).attr("for", "test-"+pos);
-
+        
     	//elimina el elemento seleccionado con el evento click
     	$("button").click(function(event){
 			$(this).parent().remove();
 		});
-
 
     	/*var marcado = $("#to-do").prop("checked");
 
@@ -46,9 +41,17 @@ $(document).ready( function (){
     			{
         		oks.push($(this).data("listos"));
     			});
-*/
+*/      
+    function display()
+{
+for(i=0;i<10;i++){
+document.write("<input type='text' id='"+i+"' value='el valor del id es: "+i+"'/><br/><br/>");
+}
+}
 
 	});// .../. keypress
 
+
+ 
 
 	});// .../. ready

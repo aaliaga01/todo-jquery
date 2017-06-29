@@ -1,9 +1,9 @@
 .titulo{
-	background-color: silver;
+	background-color: yellow;
 }
 
 .fondo{
-	background-color: pink;
+	background-color: whitesmoke;
 	height: 100vh;
 }
 
@@ -16,6 +16,7 @@
 	border:solid silver thin;
 }
 
-input{
-	height: 50px;
+
+ul li{
+	list-style-type: none;
 }
