@@ -1,20 +1,20 @@
 $(document).ready( function (){
-	var nuevaTarea= document.getElementById("tarea-nueva").value;
 
-	$('#ingreso').keydown(function() {
-		var key = e.which;
-		if (key == 13) {
-			// As ASCII code for ENTER key is "13"
-		$('#ingreso').submit( function(){
-			alert("hola!")
-		}
+	$('#tarea-nueva').keypress(function(e) {
 
+		var tarea = document.getElementById("tarea-nueva").value; // tomar el valor de input
 
+		if(tarea.length == 0){
+    		alert("ingresa una tarea");
+			}
 
-			); // Submit form code
-		}
-	});
+    	if(e.which == 13) {
+        event.preventDefault();
+        	$("#tareas").prepend("<p>Texto añadido al comienzo del párrafo.</p>");
+    	}
 
+    	
 
+	});// .../. keypress
 
-});
+});// .../. ready
