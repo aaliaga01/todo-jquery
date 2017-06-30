@@ -4,11 +4,12 @@
 
 .fondo{
 	background-color: whitesmoke;
-	height: 100vh;
+	height: 100%;
 }
 
 .lista{
 	background-color: white;
+	margin-top: 60px;
 }
 
 .ingresa{
@@ -16,7 +17,11 @@
 	border:solid silver thin;
 }
 
+button{
+	float:right;
+}
 
-ul li{
-	list-style-type: none;
+#contenedor-principal{
+	box-sizing: content-box;
+	height: 100vh;
 }

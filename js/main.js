@@ -8,21 +8,21 @@ $(document).ready( function (){
     		alert("ingresa una tarea");
 			}*/
 
-		    var parrafo= $("<li class='listado'></li>");
-        	var caja= $("<input type='checkbox'/>");
-        	var etiqueta= $("<label></label>");
+		   var parrafo= $("<p class='listado'></p>");
+        	var input= $("<input type='checkbox' id='to-do'/>");
+        	var etiqueta= $("<label for='to-do'></label>");
         	var boton= $("<button>Remove</button>");
 
         //condicion que agrega elementos a la lista presionando enter
     	if(e.which == 13) {
         event.preventDefault();
 
-        	$("#tareas ul").prepend(parrafo);
-        	$(parrafo).prepend(caja,boton);
+        	$("#tareas").prepend(parrafo);
+        	$(parrafo).prepend(input,etiqueta,boton);
         	$(etiqueta).text(tarea);
-            $(caja).wrap(etiqueta);
 
     	}
+
 
         
     	//elimina el elemento seleccionado con el evento click
